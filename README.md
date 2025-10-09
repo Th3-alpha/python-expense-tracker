@@ -30,5 +30,5 @@ It allows users to record, edit, delete, and analyze their daily expenses — al
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/expense-tracker.git
+   git clone https://github.com/Th3-alpha/python-expense-tracker.git
    cd expense-tracker
