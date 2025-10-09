@@ -28,7 +28,7 @@ def add_expense():
         id = sum(1 for _ in open(FILE_NAME))  # count lines for ID
         writer.writerow([id, date, category, description, amount])
 
-    print("✅ Expense added successfully!\n")
+    print("Expense added successfully!\n")
 
 def view_expenses():
     """Display all expenses in a nice table."""
@@ -55,7 +55,7 @@ def edit_expense():
         expense_id = int(input("\nEnter the ID of the expense to edit: "))
 
         if expense_id not in df["ID"].values:
-            print("❌ Expense not found.")
+            print("Expense not found.")
             return
 
         print("\nLeave a field empty to keep the current value.")
@@ -71,7 +71,7 @@ def edit_expense():
             new_date, new_category, new_description, new_amount
         ]
         df.to_csv(FILE_NAME, index=False)
-        print("✅ Expense updated successfully!\n")
+        print("Expense updated successfully!\n")
 
     except FileNotFoundError:
         print("No data found. Try adding an expense first.")
@@ -88,12 +88,12 @@ def delete_expense():
         expense_id = int(input("\nEnter the ID of the expense to delete: "))
 
         if expense_id not in df["ID"].values:
-            print("❌ Expense not found.")
+            print("Expense not found.")
             return
 
         df = df[df["ID"] != expense_id]
         df.to_csv(FILE_NAME, index=False)
-        print("🗑️ Expense deleted successfully!\n")
+        print("Expense deleted successfully!\n")
 
     except FileNotFoundError:
         print("No data found. Try adding an expense first.")
@@ -107,8 +107,8 @@ def summary_report():
             return
         
         total = df["Amount"].sum()
-        print("\n💰 Total Spending: ₦{:.2f}".format(total))
-        print("\n📊 Spending by Category:")
+        print("\n Total Spending: ₦{:.2f}".format(total))
+        print("\n Spending by Category:")
         summary = df.groupby("Category")["Amount"].sum()
         print(summary.to_string())
 
@@ -150,7 +150,7 @@ def main():
         elif choice == "5":
             summary_report()
         elif choice == "6":
-            print("Goodbye! 👋")
+            print("Goodbye! ")
             break
         else:
             print("Invalid choice, try again.\n")
