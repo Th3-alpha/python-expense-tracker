@@ -1,7 +1,6 @@
 # Python Expense Tracker
 
-A simple **command-line expense tracking app** built with **Python**, **Pandas**, and **Matplotlib**.
-It allows users to record, edit, delete, and analyze their daily expenses — all stored locally in a CSV file.
+A command-line personal finance application built with **Python**, **Pandas**, and **Matplotlib** that enables users to manage expenses, maintain persistent records, and analyze spending patterns through reports and visualizations.
 
 ---
 
